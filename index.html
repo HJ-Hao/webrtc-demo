@@ -101,6 +101,12 @@
     console.log('媒体流已结束');
   });
 
+  setInterval(function() {
+    if (video.paused && !video.playing) {
+      console.log('媒体流已结束');
+    }
+  }, 1000); // 每秒检查一次状态
+
   </script>
 </body>
 </html>
