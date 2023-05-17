@@ -37,7 +37,7 @@
     }
 
     const reconnect = () => {
-      console.warn('Attempting to reconnect...');
+      console.log('Attempting to reconnect...');
       disconnect();
       connect();
     }
@@ -72,7 +72,7 @@
         mediaStream = stream;
         mediaStream.getTracks().forEach(track => {
           track.onended = () => {
-            console.warn('MediaStreamTrack has ended');
+            console.log('MediaStreamTrack has ended');
             reconnect();
           };
       });
@@ -83,11 +83,9 @@
     }
 
     const startVideo = () => {
-      console.log(video)
       if (!video) {
         createVideo();
       }
-      console.log(video);
       connect();
   }
   start.addEventListener('click', () => {
