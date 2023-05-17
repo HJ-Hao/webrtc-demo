@@ -95,6 +95,13 @@
   });
 
 
+  video.addEventListener('error', (e) => {
+    console.log('媒体流中断', e.target.error)
+  });
+
+  video.addEventListener('ended', function() {
+    console.log('媒体流已结束');
+  });
 
   </script>
 </body>
