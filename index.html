@@ -92,21 +92,6 @@
     startVideo()
   });
 
-
-  video.addEventListener('error', (e) => {
-    console.log('媒体流中断', e.target.error)
-  });
-
-  video.addEventListener('ended', function() {
-    console.log('媒体流已结束');
-  });
-
-  setInterval(function() {
-    if (video.paused && !video.playing) {
-      console.log('媒体流已结束');
-    }
-  }, 1000); // 每秒检查一次状态
-
   </script>
 </body>
 </html>
